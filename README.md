@@ -94,3 +94,12 @@ DD Month YYYY
 - The date is based on the user’s system time.
 - No external libraries are required.
 - The script can be placed in the `<head>` section or just before the closing `</body>` tag.
+
+## Notes on Footer Ammendments
+
+- Improved footer font hierarchy (headings, links, meta text) for readability.
+- Increased padding and standardized spacing with consistent gaps and removed default paragraph margins.
+- Improved contrast by using a darker background and higher-contrast text/link colors.
+- Tested responsive layout in:
+  - Desktop view (normal width)
+  - Mobile view (narrow viewport using DevTools)
