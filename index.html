@@ -599,21 +599,29 @@
       </div>
 
       <!-- Bottom -->
-      <div class="footer-bottom">
+     <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">05-Feb-2026</span> —By Idah Makena</p>
-      </div>
+        <p class="footer-meta">
+    Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Idah Makena
+    </p>
+    </div>
       <script>
-  const date = new Date();
+  document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  const day = date.getDate();
-  const month = date.toLocaleString('default', { month: 'long' });
-  const year = date.getFullYear();
-
-  document.getElementById('deployDate').textContent =
-    `${day} ${month} ${year}`;
+    const deployDateSpan = document.getElementById('deployDate');
+    if (deployDateSpan) {
+      const date = new Date();
+      const day = date.getDate();
+      const month = date.toLocaleString('default', { month: 'long' });
+      const year = date.getFullYear();
+      deployDateSpan.textContent = `${day} ${month} ${year}`;
+    }
+  });
 </script>
+
     </div>
   </footer>
 
